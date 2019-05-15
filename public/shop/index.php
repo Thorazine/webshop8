@@ -4,26 +4,7 @@
     $query = 'SELECT * FROM products WHERE slug = :slug';
 
     $db = new DB;
-    dd($db->find($query, ['slug' => $_GET['slug']]));
-
-    // $product = $conn->prepare($query);
-
-    // try {
-    //     $product->execute([
-    //         'slug' => $_GET['slug']
-    //     ]);
-    //     $product->setFetchMode(PDO::FETCH_ASSOC);
-    //     $product = $product->fetch();
-
-    //     // dd($product);
-    // }
-    // catch(PDOException $e) {
-    //     echo 'Whoops, query mislukt';
-    // }
-
-    // database opstarten
-
-    // query draaien
+    $product = $db->find($query, ['slug' => $_GET['slug']]);
 
 
     $title = $product['title'];
