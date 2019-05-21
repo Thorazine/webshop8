@@ -1,5 +1,5 @@
 <?php
-    include '../helpers/bootstrap.php'; // laadt alle benodigdheden in
+    include '../boot.php'; // laadt alle benodigdheden in
 
     $title = 'Home';
     include "../partials/head.php";
@@ -12,3 +12,4 @@
 </div>
 
 <?php include "../partials/footer.php"; ?>
+

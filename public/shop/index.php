@@ -1,5 +1,5 @@
 <?php
-    include '../../helpers/bootstrap.php'; // laadt alle benodigdheden in
+    include '../../boot.php'; // laadt alle benodigdheden in
 
     $query = 'SELECT * FROM products WHERE slug = :slug';
 
