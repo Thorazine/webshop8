@@ -2,6 +2,8 @@
 
 class DB {
 
+    $variable = 'bla';
+
     private $dbhost = 'localhost';
     private $dbname = 'webshop8b';
     private $dbuser = 'root';
