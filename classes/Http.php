@@ -20,8 +20,6 @@ Class Http
             $urlParts = explode('/public/', $_SERVER['REQUEST_URI']);
 
             self::$webroot = self::httpOrHttps().$_SERVER['HTTP_HOST'].$urlParts[0].'/public';
-            http://localhost/webshop8c/public/
-            self::$webroot.'shop/?slug=santa-cruz-mountainbike';
 
             // dd($urlParts[0]);
 

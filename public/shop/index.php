@@ -13,7 +13,7 @@
     include "../../partials/menu.php"; ?>
 
     <div class="container">
-        <img src="../img/<?= $product['image']; ?>">
+        <img src="<?= Http::asset('img/'.$product['image']); ?>">
         <h1><?= $product['title']; ?></h1>
     </div>
 
