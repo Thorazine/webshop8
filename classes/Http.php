@@ -19,25 +19,32 @@ Class Http
         if($_SERVER['HTTP_HOST'] == 'localhost' && strpos($_SERVER['REQUEST_URI'], '/public/')) {
             $urlParts = explode('/public/', $_SERVER['REQUEST_URI']);
 
-            self::$webroot = self::httpOrHttps().$_SERVER['HTTP_HOST'].$urlParts[0].'/public/';
+            self::$webroot = self::httpOrHttps().$_SERVER['HTTP_HOST'].$urlParts[0].'/public';
+            http://localhost/webshop8c/public/
+            self::$webroot.'shop/?slug=santa-cruz-mountainbike';
+
+            // dd($urlParts[0]);
+
+            // self::$docroot = explode('/public', $urlParts[0])[0];
         }
         else {
             self::$webroot = self::httpOrHttps().$_SERVER['HTTP_HOST'];
         }
 
-        self::$docroot[0] = explode('/public/', __DIR__);
+        // dd(self::$webroot.' - '. __DIR__);
+        // self::$docroot = explode('/public', __DIR__)[0];
 
 
     }
 
 
-    public static function asset($path)
+    public static function asset($path = '')
     {
-        return self::$webroot.'/'.ltrim('/'. $path);
+        return self::$webroot.ltrim('/'. $path);
     }
 
 
-    public static function root($path)
+    public static function root($path = '')
     {
         return self::$docroot.'/'.ltrim('/'. $path);
     }
