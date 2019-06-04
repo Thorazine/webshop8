@@ -6,7 +6,7 @@ class Auth {
 
     public static function check()
     {
-        if (self::$user) {
+        if (@$_SESSION['user']) {
             return true;
         }
         return false;
@@ -15,7 +15,7 @@ class Auth {
 
     public static function user()
     {
-        return self::$user;
+        return @$_SESSION['user'];
     }
 
 
@@ -29,10 +29,16 @@ class Auth {
 
         if($loggedIn) {
             self::$user = $user; // database data
+            $_SESSION['user'] = $user;
             return $user;
         }
         else {
             return false;
         }
+    }
+
+    public static function logout()
+    {
+        unset($_SESSION['user']);
     }
 }

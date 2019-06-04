@@ -42,6 +42,12 @@ Class Http
     }
 
 
+    public static function redirect($path = '')
+    {
+        header('Location: '.self::asset($path));
+    }
+
+
     public static function root($path = '')
     {
         return self::$docroot.'/'.ltrim('/'. $path);
