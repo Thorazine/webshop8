@@ -4,9 +4,7 @@
     // If form has posted, check login data with database and login if correct
     if($_SERVER['REQUEST_METHOD'] === 'POST') {
         // dd($_POST);
-        if($user = Auth::attempt($_POST['email'], $_POST['password'])) {
-
-        }
+        Auth::attempt($_POST['email'], $_POST['password']);
     }
 
     // If loggend in, redirect to url
