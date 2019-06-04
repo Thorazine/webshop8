@@ -41,4 +41,10 @@ class Auth {
     {
         unset($_SESSION['user']);
     }
+
+    // later
+    public static function isAdmin()
+    {
+        return @$_SESSION['user']['is_admin'];
+    }
 }

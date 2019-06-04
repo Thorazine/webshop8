@@ -5,7 +5,7 @@
     if($_SERVER['REQUEST_METHOD'] === 'POST') {
         // dd($_POST);
         if($user = Auth::attempt($_POST['email'], $_POST['password'])) {
-            dd('gegevens correct!');
+
         }
     }
 
