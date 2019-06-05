@@ -1,3 +1,0 @@
-- account aanmaken
-- beheerder/klant
-- overzicht creeeren van de orders

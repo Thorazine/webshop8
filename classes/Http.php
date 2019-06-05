@@ -16,7 +16,7 @@ Class Http
         // als gevonden, dan update webroot
         // zo niet, dan is webroot domein
 
-        if($_SERVER['HTTP_HOST'] == 'localhost' && strpos($_SERVER['REQUEST_URI'], '/public/')) {
+        if(in_array($_SERVER['HTTP_HOST'], ['localhost', 'localhost:8080', 'localhost:8888']) && strpos($_SERVER['REQUEST_URI'], '/public/')) {
             $urlParts = explode('/public/', $_SERVER['REQUEST_URI']);
 
             self::$webroot = self::httpOrHttps().$_SERVER['HTTP_HOST'].$urlParts[0].'/public';
