@@ -69,4 +69,19 @@ class DB {
             echo 'Whoops, query mislukt';
         }
     }
+
+    public function insert($query, $variables = [])
+    {
+        $data = $this->connection->prepare($query);
+
+        try {
+            $data->execute($variables);
+
+            return $data;
+        }
+        catch(PDOException $e) {
+            dd($e->getMessage());
+            echo 'Whoops, query mislukt';
+        }
+    }
 }
