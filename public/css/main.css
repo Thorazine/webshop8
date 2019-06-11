@@ -1,0 +1,38 @@
+
+
+.cart {
+    position: fixed;
+    right: -285px;
+    top: 60px;
+    width: 300px;
+    min-height: 200px;
+    background-color: transparent;
+    transition: all .5s;
+    padding: 15px;
+    border: 1px solid #000;
+    border-right: none;
+}
+
+.cart:hover {
+    right: 0px;
+}
+
+.cart .table {
+    table-layout: fixed;
+}
+
+.cart th.product {
+    width: 150px;
+}
+
+.cart td.price {
+    white-space: nowrap;
+}
+
+.cart .truncate {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+

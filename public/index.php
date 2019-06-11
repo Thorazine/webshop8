@@ -19,7 +19,7 @@
     <div class="row">
         <?php foreach($products as $product) { ?>
             <div class="col-sm-4">
-                <a href="<?= Http::asset('shop?slug='.$product['slug']); ?>">
+                <a href="<?= Http::asset('shop/'.$product['slug']); ?>">
                     <?= $product['title']; ?>
                 </a>
             </div>

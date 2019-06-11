@@ -1,0 +1,7 @@
+RewriteEngine On
+
+# If the url is shop/[something], we change the url to shop/index.php?slug=[something]
+RewriteRule ^shop/([a-z0-9_-]+)$ shop/index.php?slug=$1 [NC,L]
+
+# same example, but only allow an integer
+# RewriteRule ^shop/([0-9]+)$ shop/index.php?id=$1 [NC,L]
