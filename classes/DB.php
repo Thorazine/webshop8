@@ -44,7 +44,7 @@ class DB {
             return $data;
         }
         catch(PDOException $e) {
-            echo 'Whoops, query mislukt';
+            dd($e->getMessage());
         }
     }
 
@@ -66,7 +66,7 @@ class DB {
             return $data;
         }
         catch(PDOException $e) {
-            echo 'Whoops, query mislukt';
+            dd($e->getMessage());
         }
     }
 
