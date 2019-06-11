@@ -18,7 +18,7 @@
         <img src="<?= Http::asset('img/'.$product['image']); ?>">
         <h1><?= $product['title']; ?></h1>
 
-        <button type="button" class="btn btn-success" id="order" data-id="<?= $product['id']; ?>">Kopen! Nu!</button>
+        <a href="<?= Http::asset('api/cart.php?id='.$product['id'].'&action=add'); ?>" class="btn btn-success" id="order">Kopen! Nu!</a>
     </div>
 
 <?php include "../../partials/footer.php"; ?>

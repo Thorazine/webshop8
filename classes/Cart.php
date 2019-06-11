@@ -2,7 +2,7 @@
 
 class Cart {
 
-    public function __construct()
+    public static function boot()
     {
         if(! array_key_exists('cart', $_SESSION)) {
             $_SESSION['cart'] = [
@@ -41,6 +41,12 @@ class Cart {
         self::updateTotal();
     }
 
+
+    public static function removeFromCart($id, $amount = 1)
+    {
+
+    }
+
     public static function updateTotal()
     {
         $total = 0;
@@ -48,6 +54,12 @@ class Cart {
             $total = $total + ($product['price'] * $product['quantity']);
         }
         $_SESSION['cart']['total'] = $total; // 0.00
+    }
+
+
+    public static function get()
+    {
+        return $_SESSION['cart'];
     }
 
 }
