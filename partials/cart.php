@@ -1,4 +1,5 @@
 <aside class="cart">
+    <div class="arrow"></div>
     <h3>Cart</h3>
 
     <table class="table">

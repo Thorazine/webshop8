@@ -44,7 +44,15 @@ class Cart {
 
     public static function removeFromCart($id, $amount = 1)
     {
-
+        if(array_key_exists($id, $_SESSION['cart']['products'])) {
+            if($_SESSION['cart']['products'][$id]['quantity'] - $amount <= 0) {
+                unset($_SESSION['cart']['products'][$id]);
+            }
+            else {
+                $_SESSION['cart']['products'][$id]['quantity'] = $_SESSION['cart']['products'][$id]['quantity'] - $amount;
+            }
+        }
+        self::updateTotal();
     }
 
     public static function updateTotal()

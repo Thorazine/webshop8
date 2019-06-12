@@ -7,6 +7,11 @@ Class Http
     public static $docroot = '';
 
 
+    public function __construct(){
+        dd('durp');
+    }
+
+
     public static function boot()
     {
         // we gaan alles bepalen qua path en webroot en whatever
