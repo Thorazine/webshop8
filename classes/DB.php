@@ -77,7 +77,7 @@ class DB {
         try {
             $data->execute($variables);
 
-            return $data;
+            return $this->connection->lastInsertId();
         }
         catch(PDOException $e) {
             dd($e->getMessage());
